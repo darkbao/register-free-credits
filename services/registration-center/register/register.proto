@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "/register";
+package register;
+
+service Register {
+  // 注册账户
+  rpc SignIn (SignInReq) returns (Empty) {}
+}
+
+message SignInReq {
+  string name = 1;
+  string id = 2;
+  string phone_num = 3;
+}
+
+message Empty {}

@@ -10,8 +10,7 @@ service Register {
 
 message SignInReq {
   string name = 1;
-  string id = 2;
-  string phone_num = 3;
+  string phone_num = 2;
 }
 
 message Empty {}

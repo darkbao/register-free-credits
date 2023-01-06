@@ -14,7 +14,6 @@ import (
 var (
 	addr  = flag.String("addr", "localhost:50051", "the address to connect to")
 	name  = flag.String("name", "nobody", "Name to sign in")
-	id    = flag.String("id", "1234567890", "Identity card")
 	phone = flag.String("phone", "11011011011", "Phone number")
 )
 
@@ -31,7 +30,6 @@ func main() {
 	defer cancel()
 	if _, err = c.SignIn(ctx, &pb.SignInReq{
 		Name:     *name,
-		Id:       *id,
 		PhoneNum: *phone,
 	}); err != nil {
 		log.Fatalf("could not sign in: %v", err)
